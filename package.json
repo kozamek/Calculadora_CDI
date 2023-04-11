@@ -1,0 +1,27 @@
+{
+  "name": "js-calculadora-cdi",
+  "version": "1.0.0",
+  "description": "Calculadora CDI em nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonas Fabricio Kozamekinas",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kozamek/Calculadora_CDI.git"
+  },
+  "keywords": [
+    "nodejs",
+    "CDI"
+  ],
+  "bugs": {
+    "url": "https://github.com/kozamek/Calculadora_CDI/issues"
+  },
+  "homepage": "https://github.com/kozamek/Calculadora_CDI#readme"
+}
