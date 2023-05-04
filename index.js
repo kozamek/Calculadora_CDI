@@ -1,7 +1,7 @@
 var moment = require('moment');//npm install moment
 var a = moment('2023-04-24');
 var b = moment('2027-12-30');
-var arr = [530000]; var funds_inicial = 0;
+var arr = [1000, 10000, 100000]; var funds_inicial = 0;
 var selic_diaria = 0.0003739726; //Selic = 13.75%, que para CDI 13,65/100= 0,1365, e 0,1365/365 = 0,0003739726
 var count = 0;
 var periodo_dias = b.diff(a,'days');
