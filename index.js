@@ -4,11 +4,10 @@ var b = moment('2027-12-30');
 var arr = [1000, 10000, 100000]; var funds_inicial = 0;
 var selic_diaria = 0.0003739726; //Selic = 13.75%, que para CDI 13,65/100= 0,1365, e 0,1365/365 = 0,0003739726
 var count = 0;
-var periodo_dias = b.diff(a,'days');
-var porcent_ir = IR_devido_por_dias(periodo_dias);//chamada da fuction passado quantidade dias do investimento para verificar o IR devido
+var porcent_ir = IR_devido_por_dias(b.diff(a,'days'));//chamada da fuction passado quantidade dias do investimento para verificar o IR devido
 arr.forEach(funds =>{ console.log('Valor do redimento inicial com R$'+ funds);
 funds_inicial = funds;
-for (var m = moment(a); m.isBefore(b); m.add(1, 'days')) {
+for (a ; m.isBefore(b); m.add(1, 'days')) {
     funds = funds + (funds*selic_diaria);
     count = count + 1;
     if((count%30==0)||(count==1))//if para imprimir em 30 dias e primeiro dia
