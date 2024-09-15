@@ -12,7 +12,9 @@ Depois execute a chamada do programa index.js passando na ordem de argumentos: V
 node index.js 10.5 2029-12-30 100000
 
   Exemplo do Resultado.
+  
   PS C:\Users\XXXX\Calculadora_CDI> node index.js 10.5 2029-12-30 100000
+  
   [
   'C:\\Program Files\\nodejs\\node.exe',
   'C:\\Calculadora_CDI\\index.js',
@@ -20,6 +22,7 @@ node index.js 10.5 2029-12-30 100000
   '2029-12-30',
   '100000'
   ]
+  
   Valor do rendimento inicial com R$100000
 
   Rendimento no dia 2024-09-15 no valor R$24.459086151141303 Rendimento acumulado na data de 100028.76712
