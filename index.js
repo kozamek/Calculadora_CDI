@@ -1,11 +1,13 @@
+const args = process.argv;
+console.log(args);
 var moment = require('moment');//npm install moment
-var a = moment('2023-04-24'); var m;
-var b = moment('2027-12-30');
-var arr = [50000, 80000]; var funds_inicial = 0;
-var selic_diaria = 0.0003739726; //Selic = 13.75%, que para CDI 13,65/100= 0,1365, e 0,1365/365 = 0,0003739726
+var a = moment(); var m;
+var b = moment(args[3]); //var money = args[4].toFixed(10);
+var arr = [Number(args[4])]; var funds_inicial = 0;
+var selic_diaria = ((args[2]/100)/365).toFixed(10); //0.0003739726; //Selic = 13.75%, que para CDI 13,65/100= 0,1365, e 0,1365/365 = 0,0003739726
 var count = 0;
 var porcent_ir = IR_devido_por_dias(b.diff(a,'days'));//chamada da fuction passado quantidade dias do investimento para verificar o IR devido
-arr.forEach(funds =>{ console.log('Valor do redimento inicial com R$'+ funds);
+arr.forEach(funds =>{ console.log('Valor do rendimento inicial com R$'+ funds);
 funds_inicial = funds;
 m = moment(a);
 for (m ; m.isBefore(b); m.add(1, 'days')) {
@@ -13,7 +15,7 @@ for (m ; m.isBefore(b); m.add(1, 'days')) {
     count = count + 1;
     if((count%30==0)||(count==1))//if para imprimir em 30 dias e primeiro dia
     {
-      console.log('Redimento no dia '+m.format('YYYY-MM-DD') +' no valor R$'+((funds*selic_diaria)-(porcent_ir*(funds*selic_diaria))));
+      console.log('Rendimento no dia '+m.format('YYYY-MM-DD') +' no valor R$'+((funds*selic_diaria)-(porcent_ir*(funds*selic_diaria)))+' Rendimento acumulado na data de '+funds);
     }
 }
 var ganho = funds-funds_inicial;
